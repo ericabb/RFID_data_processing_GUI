@@ -1,3 +1,4 @@
+% This is the main file of this project.
 function varargout = GUI(varargin)
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
@@ -99,7 +100,7 @@ set(handles.Edit_AnNum,'String',num2str(AntN));
 set(handles.Edit_SenNum,'String',num2str(SensN));
 
 
-Importing_Done = msgbox('Importing Done£¡','Reminder','help','modal');
+Importing_Done = msgbox('Importing DoneÂ£Â¡','Reminder','help','modal');
 
 strAID_new = '';
 for i = 1:AntN
@@ -154,16 +155,16 @@ if (strcmp(Sens_Selected,'All '))
         h=msgbox('Please select right row and column!','Reminder','help','modal');
     end
     if row*col<2*SensN
-        h=msgbox('Not enough row or column£¡','Reminder','help','modal');
+        h=msgbox('Not enough row or columnÂ£Â¡','Reminder','help','modal');
     end
 
     if (~isempty(strRow) && ~isempty(strCol) && (row*col>=2*SensN))
         singlePlot(Data,PathName,Ant_Selected,Sens_Selected,minTemp,maxTemp,row,col);
-        h=msgbox('Ploting Done£¡','Reminder','help','modal');
+        h=msgbox('Ploting DoneÂ£Â¡','Reminder','help','modal');
     end
 else
     singlePlot(Data,PathName,Ant_Selected,Sens_Selected,minTemp,maxTemp,row,col);
-    h=msgbox('Ploting Done£¡','Reminder','help','modal');
+    h=msgbox('Ploting DoneÂ£Â¡','Reminder','help','modal');
 end
 
 
